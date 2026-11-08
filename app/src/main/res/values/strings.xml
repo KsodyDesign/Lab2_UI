@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Lab2_UI</string>
+    <string name="title_registration">Регистрация (Задание 1)</string>
+    <string name="hint_name">Имя</string>
+    <string name="hint_age">Возраст (число)</string>
+    <string name="agree_terms">Согласен с правилами</string>
+    <string name="btn_submit">Отправить (Toast)</string>
+    <string name="title_navigation">Навигация (Задание 2)</string>
+    <string name="hint_message">Введите сообщение для 2-го экрана</string>
+    <string name="btn_go">Перейти на экран 2</string>
+    <string name="title_detail">Детальный экран</string>
+    <string name="btn_back">Вернуться назад</string>
+</resources>

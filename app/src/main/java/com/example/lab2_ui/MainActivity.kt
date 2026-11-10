@@ -6,9 +6,8 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private lateinit var etName: EditText
     private lateinit var etAge: EditText
@@ -17,6 +16,12 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var etMessage: EditText
     private lateinit var btnGo: Button
+
+    private val detailLauncher = registerForActivityResult(
+        androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()
+    ) {
+        Toast.makeText(this, "Возврат с детального экрана", Toast.LENGTH_SHORT).show()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,7 +79,7 @@ class MainActivity : AppCompatActivity() {
 
             val intent = Intent(this, DetailActivity::class.java)
             intent.putExtra("EXTRA_MESSAGE", text)
-            startActivity(intent)
+            detailLauncher.launch(intent)
         }
     }
 }

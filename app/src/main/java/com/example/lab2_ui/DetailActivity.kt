@@ -3,9 +3,8 @@ package com.example.lab2_ui
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 
-class DetailActivity : AppCompatActivity() {
+class DetailActivity : BaseActivity() {
 
     private lateinit var tvResult: TextView
     private lateinit var btnBack: Button
